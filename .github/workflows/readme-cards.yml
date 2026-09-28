@@ -1,0 +1,65 @@
+# Gera os cards de estatísticas do README dentro do próprio repositório.
+# Mais confiável que a instância pública github-readme-stats.vercel.app,
+# que os mantenedores descrevem como "best-effort" e sujeita a limites de requisição.
+#
+# Por padrão usa o GITHUB_TOKEN, que só enxerga repositórios PÚBLICOS.
+# Para incluir estatísticas de repositórios privados, crie um token pessoal (PAT)
+# com os escopos `repo` e `read:user`, salve-o como secret `README_STATS_TOKEN`
+# e troque `secrets.GITHUB_TOKEN` por `secrets.README_STATS_TOKEN` abaixo.
+# Atenção: isso expõe no card o nome das linguagens dos repositórios privados, mas não o código.
+
+name: Atualizar cards do README
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # todos os dias às 06:00 (horário de Brasília)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stats (tema escuro)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_rank=true&hide_border=true&bg_color=0D1117&title_color=A78BFA&icon_color=60A5FA&text_color=C9D1D9&custom_title=Atividade%20no%20GitHub&locale=pt-br
+          path: profile/stats-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Stats (tema claro)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: username=${{ github.repository_owner }}&show_icons=true&hide_rank=true&hide_border=true&bg_color=FFFFFF&title_color=6D28D9&icon_color=2563EB&text_color=334155&custom_title=Atividade%20no%20GitHub&locale=pt-br
+          path: profile/stats-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Linguagens (tema escuro)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&hide_border=true&bg_color=0D1117&title_color=A78BFA&text_color=C9D1D9&custom_title=Linguagens%20mais%20usadas&locale=pt-br
+          path: profile/top-langs-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Linguagens (tema claro)
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6&hide_border=true&bg_color=FFFFFF&title_color=6D28D9&text_color=334155&custom_title=Linguagens%20mais%20usadas&locale=pt-br
+          path: profile/top-langs-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Salvar cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git commit -m "chore: atualizar cards do README" || exit 0
+          git push
