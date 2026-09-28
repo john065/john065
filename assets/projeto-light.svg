@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400" role="img" aria-labelledby="t d">
+  <title id="t">Difery — projeto principal</title>
+  <desc id="d">Difery (em desenvolvimento): Gestão empresarial com inteligência artificial. Tecnologia para simplificar operações e automatizar processos reais.</desc>
+  <style>
+    .up{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+    .fade{animation:fade 1.2s ease-out both}
+    @keyframes up{from{opacity:0;transform:translateY(14px)}}
+    @keyframes fade{from{opacity:0}}
+    .d1{animation-delay:.05s}.d2{animation-delay:.25s}.d3{animation-delay:.45s}
+    .d4{animation-delay:.65s}.d5{animation-delay:.85s}.d6{animation-delay:1.05s}.d7{animation-delay:1.25s}
+    .wave{transform-box:fill-box;transform-origin:70% 85%;animation:wave 2.2s ease-in-out .9s 2}
+    @keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(14deg)}20%{transform:rotate(-8deg)}40%{transform:rotate(-4deg)}50%{transform:rotate(10deg)}}
+    .node{transform-box:fill-box;transform-origin:center;animation:pulse 3.2s ease-in-out infinite}
+    @keyframes pulse{50%{transform:scale(1.3)}}
+    .flow{stroke-dasharray:6 9;animation:flow 7s linear infinite}
+    @keyframes flow{to{stroke-dashoffset:-150}}
+    .drift{animation:drift 16s ease-in-out infinite alternate}
+    @keyframes drift{to{transform:translate(-70px,34px)}}
+    .blink{animation:blink 1s step-end 12}
+    @keyframes blink{50%{opacity:0}}
+    .ring{transform-box:fill-box;transform-origin:center;animation:ring 2.4s ease-out infinite}
+    @keyframes ring{from{transform:scale(1);opacity:.7}to{transform:scale(2.8);opacity:0}}
+    .halo{animation:halo 4s ease-in-out infinite}
+    @keyframes halo{50%{opacity:.35}}
+    @media (prefers-reduced-motion:reduce){.up,.fade,.wave,.node,.flow,.drift,.blink,.ring,.halo{animation:none!important}.ring{opacity:0}}
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="0.55" stop-color="#F6F7FF"/><stop offset="1" stop-color="#EDE9FE"/></linearGradient>
+    <linearGradient id="ac" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#7C3AED"/></linearGradient>
+    <radialGradient id="g1" cx="0.88" cy="0.12" r="0.65"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.16"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+    <radialGradient id="g2" cx="0.05" cy="1" r="0.55"><stop offset="0" stop-color="#3B82F6" stop-opacity="0.10"/><stop offset="1" stop-color="#3B82F6" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1E1B4B" stroke-opacity="0.045"/></pattern>
+    <clipPath id="frame"><rect width="900" height="400" rx="20"/></clipPath>
+    <linearGradient id="shine" gradientUnits="userSpaceOnUse" x1="50" y1="0" x2="290" y2="0"><stop offset="0" stop-color="#2563EB"/><stop offset="0.42" stop-color="#7C3AED"/><stop offset="0.5" stop-color="#A5B4FC"/><stop offset="0.58" stop-color="#7C3AED"/><stop offset="1" stop-color="#2563EB"/><animateTransform attributeName="gradientTransform" type="translate" values="-240 0;240 0" dur="5s" repeatCount="indefinite"/></linearGradient>
+    <radialGradient id="orbglow"><stop offset="0" stop-color="#8B5CF6" stop-opacity="0.35"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+  </defs>
+  <g clip-path="url(#frame)"><rect width="900" height="400" fill="url(#bg)"/><rect width="900" height="400" fill="url(#grid)"/><rect class="drift" x="-100" y="-100" width="1100" height="600" fill="url(#g1)"/><rect width="900" height="400" fill="url(#g2)"/></g>
+  <rect x="0.75" y="0.75" width="898.5" height="398.5" rx="19.5" fill="none" stroke="#7C3AED" stroke-opacity="0.22" stroke-width="1.5"/>
+  <g font-family="'Segoe UI', Inter, 'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <g><circle class="halo" cx="772" cy="196" r="104" fill="url(#orbglow)"/><circle cx="772" cy="196" r="94" fill="none" stroke="#7C3AED" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="3 10"/><g><animateTransform attributeName="transform" type="rotate" from="0 772 196" to="360 772 196" dur="28s" repeatCount="indefinite"/><circle cx="772" cy="102" r="7" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2.5"/><circle cx="853" cy="243" r="5" fill="#2563EB"/></g><circle cx="772" cy="196" r="60" fill="none" stroke="url(#ac)" stroke-opacity="0.55" stroke-width="1.5"/><g><animateTransform attributeName="transform" type="rotate" from="360 772 196" to="0 772 196" dur="18s" repeatCount="indefinite"/><circle cx="712" cy="196" r="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="2.5"/><circle cx="814" cy="154" r="4" fill="#7C3AED"/></g><circle cx="772" cy="196" r="33" fill="#FFFFFF" stroke="url(#ac)" stroke-width="3.5"/><text x="772" y="207" text-anchor="middle" fill="url(#ac)" font-size="32" font-weight="800">D</text></g>
+    <text x="56" y="70" fill="#7C3AED" font-size="16" font-weight="700" letter-spacing="3.5">PROJETO PRINCIPAL</text>
+    <text x="52" y="146" fill="url(#shine)" font-size="72" font-weight="800" letter-spacing="-2">Difery</text>
+    <g><rect x="300" y="104" width="211" height="34" rx="17" fill="#FFFFFF" fill-opacity="0.7" stroke="#059669" stroke-opacity="0.55"/><circle cx="320" cy="121" r="5.5" fill="#059669"/><circle class="ring" cx="320" cy="121" r="5.5" fill="none" stroke="#059669" stroke-width="1.5"/><text x="334" y="127" fill="#334155" font-size="17" font-weight="600">Em desenvolvimento</text></g>
+    <text x="56" y="204" fill="#334155" font-size="25" font-weight="600">Gestão empresarial com inteligência artificial.</text>
+    <text x="56" y="246" fill="#64748B" font-size="23">Tecnologia para simplificar operações</text><text x="56" y="280" fill="#64748B" font-size="23">e automatizar processos reais.</text>
+    <g><rect x="56" y="318" width="97" height="42" rx="21" fill="#F1EEFF" stroke="#7C3AED" stroke-opacity="0.45"/><text x="104" y="345" text-anchor="middle" fill="#3B2A8C" font-size="19" font-weight="600">Gestão</text></g><g><rect x="165" y="318" width="258" height="42" rx="21" fill="#F1EEFF" stroke="#7C3AED" stroke-opacity="0.45"/><text x="294" y="345" text-anchor="middle" fill="#3B2A8C" font-size="19" font-weight="600">Inteligência artificial</text></g><g><rect x="436" y="318" width="135" height="42" rx="21" fill="#F1EEFF" stroke="#7C3AED" stroke-opacity="0.45"/><text x="503" y="345" text-anchor="middle" fill="#3B2A8C" font-size="19" font-weight="600">Automações</text></g>
+  </g>
+</svg>
