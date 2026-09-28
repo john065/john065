@@ -1,7 +1,6 @@
 <!--
   README de perfil — Johnny de Sá (john065)
-  Placeholders a substituir: SEU_LINKEDIN · SEU_PORTFOLIO · SEU_EMAIL
-  Atalho: bash scripts/configurar.sh john065 <linkedin> <portfolio> <email>
+  Contato principal: johnny@difery.com
   Visuais animados (assets/*.svg): python3 scripts/gerar_visuais.py
 -->
 
@@ -12,9 +11,7 @@
 </picture>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/SEU_LINKEDIN"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-  <a href="https://SEU_PORTFOLIO"><img alt="Portfólio" src="https://img.shields.io/badge/Portf%C3%B3lio-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white"></a>
-  <a href="mailto:SEU_EMAIL"><img alt="E-mail" src="https://img.shields.io/badge/E--mail-2563EB?style=for-the-badge&logo=maildotru&logoColor=white"></a>
+  <a href="mailto:johnny@difery.com"><img alt="E-mail" src="https://img.shields.io/badge/E--mail-johnny%40difery.com-2563EB?style=for-the-badge&logo=maildotru&logoColor=white"></a>
 </p>
 
 <br>
@@ -78,7 +75,7 @@ Trabalho com **tráfego pago** e **automações** e estou construindo a **Difery
 
 Gestão, automação, IA ou empreendedorismo: se é sobre resolver problemas reais de empresas, quero ouvir.
 
-**[LinkedIn](https://www.linkedin.com/in/SEU_LINKEDIN)** · **[Portfólio](https://SEU_PORTFOLIO)** · **[E-mail](mailto:SEU_EMAIL)**
+**[johnny@difery.com](mailto:johnny@difery.com)**
 
 <br>
 
